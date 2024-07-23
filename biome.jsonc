@@ -1,0 +1,45 @@
+{
+  "$schema": "https://biomejs.dev/schemas/1.8.1/schema.json",
+  "vcs": { "clientKind": "git", "enabled": true, "defaultBranch": "master" },
+  "formatter": {
+    "enabled": true,
+    "indentStyle": "space",
+    "lineWidth": 120,
+    "ignore": [
+      "dist",
+      ".vscode/**",
+      "**/dist/",
+      "**/LICENSE.md",
+      "**/pnpm-lock.yaml"
+    ]
+  },
+  "organizeImports": { "enabled": false },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "nursery": {
+        "all": true,
+        "noConsole": "off",
+        "noReactSpecificProps": "off",
+        "noUndeclaredDependencies": "off",
+        "useImportExtensions": "off",
+        "useImportRestrictions": "off",
+        "useTopLevelRegex": "off"
+      },
+      "style": { "useFragmentSyntax": "warn" },
+      "suspicious": { "noConsoleLog": "error", "noExplicitAny": "off" },
+      "correctness": {
+        "noUnusedImports": "error",
+        "noUnusedPrivateClassMembers": "error",
+        "noUnusedVariables": "error"
+      }
+    },
+    "ignore": ["dist", ".vscode/**"]
+  },
+  "javascript": {
+    "formatter": {
+      "quoteStyle": "single",
+      "semicolons": "asNeeded"
+    }
+  }
+}
